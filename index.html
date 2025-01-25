@@ -1,0 +1,169 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Josie Purba</title>  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
+    <script src="js/script.js" defer></script>  
+</head>  
+<body>  
+    <!-- Header -->  
+    <header>
+      <div class="logo-icon">
+        <a href="#home">
+          <img src="assets/393.jpg" alt="Logo" style="width: 50px; height:50px" />
+        </a>
+      </div>
+      <div class="nav-button">
+          <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="close" id="close">
+            <i class="fas fa-times"></i>
+          </div>
+          <nav id="menu">
+              <a href="#home">Home</a>
+              <a href="#works">Works</a>
+              <a href="#message" class="CTA">Message Me</a>
+          </nav>
+      </div>
+    </header> 
+  
+    <!-- Main content -->  
+    <main>  
+        <section id="home">  
+          <div class="title">
+            <h1>Hi <span id="name" class="tooltip" data-tooltip="Change name?">Visitor</span>,</h1>
+            <h1>Welcome to My Website</h1>
+          </div>
+            <!-- Banner Auto Slide -->
+            <div class="slides">  
+              <img class="img-slideshow" src="assets/thumb1.jpg" />  
+              <img class="img-slideshow" src="assets/thumb2.jpg" />  
+              <img class="img-slideshow" src="assets/thumb3.jpg" />  
+              <div class="slide-button">
+                <button onclick="plusDivs(-1)"><i class="fas fa-chevron-left" style="color: #fff;"></i></button>  
+                <button onclick="plusDivs(1)"><i class="fas fa-chevron-right" style="color: #fff;"></i></button>  
+              </div>
+            </div>  
+        </section> 
+        
+        <!-- Works section -->
+        <section id="works">  
+         <h2>Works</h2>  
+          <div class="project-list">
+            <!-- Project 1 -->
+            <div class="project">  
+              <div class="project-image">  
+                  <img src="assets/thumb1.jpg" alt="Project Dian" />  
+              </div>  
+              <div class="project-description">
+                  <h3>Ben Aiden I Am A Fullstack Web Developer At RevoU</h3>     
+              </div> 
+              
+                <button>Read More</button>
+              </a>
+            </div>  
+            <!-- Project 2 -->
+            <div class="project">  
+              <div class="project-image">  
+                  <img src="assets/thumb3.jpg" alt="Project Gifood" /> <!-- Changed backslash to forward slash -->  
+              </div>  
+              <div class="project-description"> <!-- Corrected closing tag -->  
+                  <h3>Fastest & Secure Platform To Invest In Crypto</h3>    
+              </div>  
+              
+                <button>Read More</button> 
+              </a> 
+            </div>  
+          </div>
+        </section>  
+        
+        <!-- Form section -->
+        <section id="message">  
+            <h2>Message Me</h2>  
+            <div class="form-section">
+
+                <!-- Form -->
+                <form id="userForm">
+                  <!-- Nama   -->
+                  <div class="form-group">  
+                      <label for="sender-name">Name:</label>
+                      <div class="input-group">
+                        <input type="text" id="sender-name" name="sender-name" placeholder="Nama">  
+                        <span class="error-message" id="name-error"></span>  
+                      </div>
+                  </div>
+                  <!-- Tanggal Lahir -->
+                  <div class="form-group">  
+                      <label for="birthdate">Birthdate:</label>
+                      <div class="input-group">
+                        <input type="date" id="birthdate" name="birthdate">  
+                        <span class="error-message" id="birthdate-error"></span>
+                      </div>
+                  </div>  
+                  <!-- Jenis Kelamin -->
+                  <div class="form-group">  
+                      <label>Gender:</label>
+                      <div class="input-group">
+                        <div class="radio-group">
+                          <div class="radio-option">
+                            <input type="radio" id="male" name="gender" value="male">  
+                            <label for="male">Male</label>
+                          </div>
+                          <div class="radio-option">
+                            <input type="radio" id="female" name="gender" value="female">  
+                            <label for="female">Female</label>
+                          </div>
+                        </div> 
+                        <span class="error-message" id="gender-error"></span>
+                      </div>
+                  </div>  
+                  <!-- Pesan -->
+                  <div class="form-group">  
+                      <label for="message-content">Message:</label>  
+                      <div class="input-group">
+                        <textarea id="message-content" name="message-content" placeholder="Pesan"></textarea>  
+                        <span class="error-message" id="message-error"></span>
+                      </div>
+                  </div>  
+                  <!-- Submit Button -->
+                  <button type="submit">Submit</button>  
+                </form>  
+
+                <!-- Preview Message -->
+                <div class="preview-message">
+                  <div class="preview-item">
+                    <label>Name:</label>
+                    <span id="sender-full-name"></span>
+                  </div>
+                  <div class="preview-item">
+                    <label>Date Of Brith:</label>
+                    <span id="sender-Date-Of-Brith"></span>  
+                  </div>
+                  <div class="preview-item">
+                    <label>Gender:</label>
+                    <span id="sender-gender"></span>  
+                  </div>
+                  <div class="preview-item">
+                    <label>Message:</label>
+                    <span id="sender-messages"></span>  
+                  </div>
+                </div>  
+            </div>             
+        </section>  
+    </main>  
+      
+    <footer style="justify-content: center;">
+          </div> 
+          <P>Josie G.F. Purba ©️ 2025</P>
+        </div>
+      </div>  
+    </footer>  
+</body>  
+</html>  
